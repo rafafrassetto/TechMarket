@@ -19,7 +19,11 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./ 
+          protocol: ftps  # Forçar FTPS explícito
+          secure: false    # Necessário para FTPS explícito
+          port: 21         # Porta padrão do FTPS
+          timeout: 120000  # Aumentar timeout para 120 segundos
+          local-dir: ./
           server-dir: ./htdocs/
           exclude: |
             .git/
@@ -27,3 +31,6 @@ jobs:
             .env
             /tests
             /node_modules
+            /vendor
+            /storage
+          additional-arguments: --dry-run  # Teste inicial
