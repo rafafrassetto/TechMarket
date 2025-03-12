@@ -102,6 +102,13 @@
             margin-left: 70px;
         }
     }
+
+    hr {
+        border: 0;
+        border-top: 2px solid rgba(128, 128, 128, 0.3);
+        /* Barra cinza com transparência */
+        margin: 20px 0;
+    }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -134,11 +141,10 @@
 
     <div class="main-content">
         <div class="header">
-            Bem-vindo ao TechShop!
         </div>
         <div class="content">
-            <h1>Página de Música</h1>
-            <p>.</p>
+            <h1>Escolha sua Música</h1>
+            <hr>
         </div>
     </div>
 </body>
