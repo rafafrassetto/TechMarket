@@ -8,107 +8,157 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-        background-color: #f5f6fa;
-    }
-
-    .sidebar {
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100vh;
-        width: 250px;
-        background-color: #2c3e50;
-        padding: 20px;
-        color: white;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .logo {
-        font-size: 24px;
-        margin-bottom: 30px;
-        padding: 10px;
-        text-align: center;
-        border-bottom: 1px solid #34495e;
-    }
-
-    .menu-item {
-        list-style: none;
-        margin: 15px 0;
-        transition: 0.3s;
-    }
-
-    .menu-item a {
-        color: #ecf0f1;
-        text-decoration: none;
-        padding: 12px;
-        display: block;
-        border-radius: 5px;
-        transition: 0.3s;
-    }
-
-    .menu-item a:hover {
-        background-color: #34495e;
-        transform: translateX(5px);
-    }
-
-    .main-content {
-        margin-left: 250px;
-        padding: 30px;
-    }
-
-    .header {
-        font-size: 28px;
-        color: #2c3e50;
-        margin-bottom: 20px;
-    }
-
-    .menu-item a i {
-        margin-right: 10px;
-        width: 20px;
-    }
-
-    @media (max-width: 768px) {
-        .sidebar {
-            width: 70px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        .sidebar .logo span {
-            display: none;
+        body {
+            background-color: #f5f6fa;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: #2c3e50;
+            padding: 20px;
+            color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            margin-bottom: 30px;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #34495e;
+        }
+
+        .menu-item {
+            list-style: none;
+            margin: 15px 0;
+            transition: 0.3s;
         }
 
         .menu-item a {
-            text-align: center;
-            padding: 15px 0;
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 12px;
+            display: block;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
-        .menu-item a i {
-            margin-right: 0;
-            font-size: 20px;
-        }
-
-        .menu-item a span {
-            display: none;
+        .menu-item a:hover {
+            background-color: #34495e;
+            transform: translateX(5px);
         }
 
         .main-content {
-            margin-left: 70px;
+            margin-left: 250px;
+            padding: 30px;
         }
-    }
 
-    hr {
-        border: 0;
-        border-top: 2px solid rgba(128, 128, 128, 0.3);
-        /* Barra cinza com transparência */
-        margin: 20px 0;
-    }
+        .header {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .menu-item a i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 70px;
+            }
+
+            .sidebar .logo span {
+                display: none;
+            }
+
+            .menu-item a {
+                text-align: center;
+                padding: 15px 0;
+            }
+
+            .menu-item a i {
+                margin-right: 0;
+                font-size: 20px;
+            }
+
+            .menu-item a span {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 70px;
+            }
+        }
+
+        hr {
+            border: 0;
+            border-top: 2px solid rgba(128, 128, 128, 0.3);
+            /* Barra cinza */
+            margin: 20px 0;
+        }
+
+        .link-button {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .link-button:hover {
+            background-color: #2ecc71;
+        }
+
+        .image {
+            width: 100%;
+            max-width: 200px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: auto;
+        }
+
+        p {
+            color: #0030b9;
+            font-size: 16px;
+            margin-top: -18px;
+            font-weight: 600;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .product img {
+            max-width: 150px;
+        }
+
+        .product-info {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .product a {
+            text-decoration: none;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -145,6 +195,34 @@
         <div class="content">
             <h1>Escolha sua Música</h1>
             <hr>
+
+            <div class="product">
+                <img src="https://q2.itc.cn/images01/20241220/37fcdaa5014344aeb9516cc83caa101c.jpeg"
+                    alt="Pacote de 5 Músicas" class="image">
+                <div class="product-info">
+                    <p>Pacote de 5 Músicas</p>
+                    <a href="https://www.asaas.com/c/kli13zzwosq60amg" class="link-button" target="_blank">Comprar</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="https://q2.itc.cn/images01/20241220/37fcdaa5014344aeb9516cc83caa101c.jpeg"
+                    alt="Pacote de 5 Músicas" class="image">
+                <div class="product-info">
+                    <p>Pacote de 5 Músicas</p>
+                    <a href="https://www.asaas.com/c/kli13zzwosq60amg" class="link-button" target="_blank">Comprar</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="https://q2.itc.cn/images01/20241220/37fcdaa5014344aeb9516cc83caa101c.jpeg"
+                    alt="Pacote de 5 Músicas" class="image">
+                <div class="product-info">
+                    <p>Pacote de 5 Músicas</p>
+                    <a href="https://www.asaas.com/c/kli13zzwosq60amg" class="link-button" target="_blank">Comprar</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
